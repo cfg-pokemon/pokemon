@@ -34,7 +34,7 @@ total_score = 0
 for round in range (5):
     print("Round", round +1)
 
-    for turn in range(5):
+    for turn in range(3):
         print("Turn", turn + 1)
         my_pokemon = chosen_pokemon()
         print('You chose {}'.format(my_pokemon['name']))
@@ -53,10 +53,10 @@ for round in range (5):
                 print('You Lose! Try again!')
             else:
                 print('Draw! Try again!')
-            if turn == 5:
+            if turn == 3:
                 break
 
-    print("Game Over! You won {}/5 points!".format(score))
+    print("Game Over! You won {}/3 points!".format(score))
 
     my_score = score
     opponent_score = 5 - score
