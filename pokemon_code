@@ -25,6 +25,7 @@ def random_pokemon():
         'weight': pokemon['weight'],
         }
 
+score = 0
 for turn in range(5):
     print ("Turn", turn +1)
     my_pokemon = chosen_pokemon()
@@ -38,11 +39,13 @@ for turn in range(5):
     opponent_stat = opponent_pokemon[stat_choice]
     if my_stat > opponent_stat:
         print('Congratulations! You Win!')
-        break
+        score += 1
     else:
         if my_stat < opponent_stat:
             print('You Lose! Try again!')
         else:
             print('Draw! Try again!')
         if turn == 5:
-            print ("Game Over")
+            break
+         
+print ("Game Over! You won {}/5 points!".format(score))
